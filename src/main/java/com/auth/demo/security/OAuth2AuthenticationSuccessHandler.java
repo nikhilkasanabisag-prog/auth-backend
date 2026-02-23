@@ -46,7 +46,8 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
 
         // Redirect to frontend with token in query param
         // Frontend reads it from URL and stores it
-        String redirectUrl = "http://localhost:5173/oauth2/callback?token=" + token;
+        //String redirectUrl = "http://localhost:5173/oauth2/callback?token=" + token;
+        String redirectUrl = "https://nikilauth.netlify.app/oauth2/callback?token=" + token;
         getRedirectStrategy().sendRedirect(request, response, redirectUrl);
     }
 }
